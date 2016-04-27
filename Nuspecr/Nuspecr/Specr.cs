@@ -30,7 +30,11 @@
                 Metadata =
                 {
                     Id = assembly.Name.Name,
+#if SEMVER2
                     Version = $"{assembly.GetFullVersion(packageVersion)}+{DateTime.UtcNow:yyyyMMddHHmmss}",
+#else
+                    Version = assembly.GetFullVersion(packageVersion),
+#endif
                     Copyright = assembly.GetCopyright(),
                     Authors = assembly.GetCompany(),
                     Owners = Environment.UserName,
