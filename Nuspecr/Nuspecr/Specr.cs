@@ -50,7 +50,7 @@
 
             this.AppendResourceFiles(sourcePath, manifest.Files);
 
-            var nuspecPath = Path.Combine(Path.GetDirectoryName(sourcePath), string.Concat(manifest.Metadata.Id, '.', manifest.Metadata.Version, Constants.ManifestExtension));
+            var nuspecPath = Path.Combine(Path.GetDirectoryName(sourcePath), $"{manifest.Metadata.Id}.{manifest.Metadata.Version}{Constants.ManifestExtension}");
             manifest.Save(nuspecPath);
         }
 
