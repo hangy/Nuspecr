@@ -48,6 +48,8 @@
                 }
             };
 
+            manifest.Metadata.EnsureTitleIsNotEmpty();
+            manifest.Metadata.EnsureDescriptionIsNotEmpty();
             this.AppendResourceFiles(sourcePath, manifest.Files);
 
             var nuspecPath = Path.Combine(Path.GetDirectoryName(sourcePath), $"{manifest.Metadata.Id}.{manifest.Metadata.Version}{Constants.ManifestExtension}");

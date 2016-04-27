@@ -92,6 +92,7 @@
     <Compile Include="AssemblyDefinitionExtensions.cs" />
     <Compile Include="CustomAttributeExtensions.cs" />
     <Compile Include="GacUtility.cs" />
+    <Compile Include="ManifestMetadataExtensions.cs" />
     <Compile Include="PackageVersion.cs" />
     <Compile Include="SpecOptions.cs" />
     <Compile Include="Program.cs" />
